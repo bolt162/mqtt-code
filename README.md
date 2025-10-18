@@ -29,7 +29,9 @@ The publisher files convert the given CSV data to JSON in memory with this line:
 And in the other terminal run the below commands one by one:
 
 python publisher.py --broker localhost --topic SHASTA/WML --csv Shasta_WML.csv --rate_hz 5
+
 python publisher.py --broker localhost --topic OROVILLE/WML --csv Oroville_WML.csv --rate_hz 5
+
 python publisher.py --broker localhost --topic SONOMA/WML --csv Sonoma_WML.csv --rate_hz 5
 
 Here is the output that the subscriber will generate:
