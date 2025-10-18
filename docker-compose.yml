@@ -1,0 +1,13 @@
+# docker-compose.yml
+# Spin up a local Eclipse Mosquitto broker with persistence
+version: "3.8"
+services:
+  mqtt:
+    image: eclipse-mosquitto:2
+    ports:
+      - "1883:1883"
+      - "9001:9001"  # websockets (optional)
+    volumes:
+      - ./mosquitto.conf:/mosquitto/config/mosquitto.conf
+      - ./mosquitto_data:/mosquitto/data
+      - ./mosquitto_log:/mosquitto/log
